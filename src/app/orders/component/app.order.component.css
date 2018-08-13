@@ -1,0 +1,18 @@
+/* Apply clearfix in a few places */
+.shopping-cart, .column-labels, .product, .totals-item {
+  
+  }
+  
+  
+  /* Apply dollar signs */
+  .product .product-price:before, .product .product-line-price:before, .totals-value:before {
+    content: '$';
+  }
+  
+  
+  /* Body/Header stuff */
+  body {
+    padding: 0px 30px 30px 20px;
+    font-family: font-default;
+    font-weight: 100;
+  }

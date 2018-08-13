@@ -1,0 +1,39 @@
+<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+&nbsp;
+&nbsp;
+
+<div class="container-fluid" style="border:1px solid black">
+    Container
+    <div class = "row">
+        <div class="col-sm-8" style="border:1px solid black">col-sm-8</div>
+        <div class="col-sm-4 mh-100" style="border:1px solid black">
+            <h3 align = "center" class="text-primary">Cart</h3>
+            <table class="table shadow-sm p-3 mb-5 bg-white rounded">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let orderItem of order; let i = index">
+                    <tr >                        
+                        <th scope="row">{{i+1}}</th>
+                        <td class="product-title">{{orderItem.item}}</td>
+                        <td class="product-price">{{orderItem.price}}</td>
+                        <td>
+                            <input type="number" name="quantity" value ="{{orderItem.quantity}}" min="1" max="30"align ="center">
+                        </td>
+                        <!-- <td class="product-quantity">{{orderItem.quantity}}</td> -->
+                         <!-- <br> -->
+                    </tr>
+                    <tr>
+                        <button class="remove-product">Remove</button>
+                    </tr>
+                    <br>
+                </tbody>
+            </table>
+        </div>
+    </div>        
+</div>
